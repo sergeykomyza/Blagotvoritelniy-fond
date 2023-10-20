@@ -1,0 +1,41 @@
+.history{
+
+    position: relative;
+    z-index: 1;
+    padding-bottom: 33px;
+
+    @media(max-width: 992px){
+        padding-bottom: 0;
+    }
+
+    &__box{
+        display: grid;
+        grid-template-columns: 0.95fr 0.7fr;
+        @media(max-width: 992px){
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &__title{
+        margin-bottom: 15px;
+    }
+
+    &__text{
+        margin-bottom: 10px;
+    }
+
+    &__foto{
+        position: absolute;
+        z-index: -1;
+        right: -21vw;
+        bottom: -5px;
+        width: 65.6vw;
+        @media(max-width: 992px){
+            position: static;
+            max-width: 500px;
+            width: 100%;
+            margin: 0 auto;
+        }
+    }
+
+}

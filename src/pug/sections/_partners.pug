@@ -1,0 +1,12 @@
+- var n = 0
+
+section.partners 
+    .container 
+        h5.title.partners__title Наши партнеры
+        .swiper.partners__slider.js-sliderPartners
+            .swiper-wrapper
+                while n < 7
+                    .swiper-slide.partners__slide 
+                        img(src=`img/partner-${n}.svg`, alt="@")
+                    - ++n
+            .swiper-pagination

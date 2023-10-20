@@ -1,0 +1,27 @@
+.cases{
+
+    margin-bottom: 100px;
+    padding-top: 60px;
+    padding-bottom: 55px;
+    background: var(--color-4);
+
+    @media(max-width: 992px){
+        margin-bottom: 50px;
+    }
+
+    &__title{
+        margin-bottom: 26px;
+        text-align: center;
+    }
+
+    .slide{
+        opacity: 0;
+        &.swiper-slide-active,
+        &.swiper-slide-active + .slide,
+        &.swiper-slide-active + .slide + .slide,
+        &.swiper-slide-active + .slide + .slide + .slide{
+            opacity: 1;
+        }
+    }
+
+}

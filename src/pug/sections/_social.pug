@@ -1,0 +1,12 @@
+-
+	var social = [
+		{icon: 'telegram.svg', iconHover: 'telegram-hover.svg'},
+		{icon: 'ok.svg',       iconHover: 'ok-hover.svg'},
+		{icon: 'vk.svg',       iconHover: 'vk-hover.svg'}
+	]
+
+.social
+	each item in social 
+		a.social__iconlink(href="#")
+			img.social__icon(src="img/"+item.icon, alt="#")
+			img.social__iconhover(src="img/"+item.iconHover, alt="#")

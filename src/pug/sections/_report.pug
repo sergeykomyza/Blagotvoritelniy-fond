@@ -1,0 +1,14 @@
+section.report 
+    .container 
+        h5.title.report__title Отчеты фонда
+        .swiper.report__slider.js-sliderReport
+            .swiper-wrapper
+                each item, i in ['август','июль','июнь','май']
+                    .swiper-slide.slide 
+                        figure.slide__fotobox
+                            img.slide__foto(src=`img/report-${i}.webp`, alt="#")
+                        .slide__content
+                            span.slide__name= `Отчет за ${item}` 
+                            .slide__morebox
+                                button.slide__morebtn Узнать больше
+            .swiper-pagination

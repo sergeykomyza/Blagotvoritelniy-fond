@@ -1,0 +1,82 @@
+.footer{
+
+    padding-top: 20px;
+    background: var(--color-5);
+
+    &__box{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(111, 136, 132, 0.50);
+        @media(max-width: 992px){
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+    }
+
+    &__logobox{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        @media(max-width: 992px){
+            align-items: center;
+        }
+    }
+
+    &__logo{
+        margin-bottom: 18px;
+    }
+
+    &-contacts{
+        display: flex;
+        flex-direction: column;
+        &__val{
+            margin-bottom: 3px;
+            font-size: 10px;
+            font-weight: 300;
+            color: #FFF;
+        }
+        &__phone{
+            margin-bottom: 20px;
+            font-size: 18px;
+            font-weight: 700;
+            color: #FFF;
+        }
+        &__email{
+            font-weight: 700;
+            text-decoration: underline;
+            color: #FFF;
+        }
+    }
+
+    &-info{
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        &__val{
+            font-size: 12px;
+            color: #FFF;
+        }
+    }
+
+    &-dev{
+        display: flex;
+        justify-content: space-between;
+        padding: 40px 0;
+        @media(max-width: 992px){
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            text-align: center;
+        }
+        &__link{
+            font-size: 10px;
+            font-weight: 300;
+            text-decoration: underline;
+            color: #FFF;
+        }
+    }
+
+}

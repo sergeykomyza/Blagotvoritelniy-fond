@@ -1,0 +1,23 @@
+include ./../mixins/_mixin.pug
+
+
+
+header.header
+	.container 
+		.header__box 
+			figure.header__logobox 
+				img.header__logo(src="img/header-logo.svg", alt="@")
+				figcaption.header__logotext Благотворительный фонд #[br] борьбы с раком
+			.desktop
+				.header-email 
+					span.header__val Пишите нам
+					a.header-email__link(href="mailto:prodlevaya.jizni@mail.ru") prodlevaya.jizni@mail.ru
+			.desktop
+				.header__social 
+					span.header__val Спрашивайте, мы онлайн
+					include ./_social.pug
+			.header-phone
+				span.header__val Звоните Пн-Пт: 10:00 - 20:00
+				a.header-phone__link(href="tel:+79777777777") + 7 (977) 777-77-77
+				button.header-phone__ordercall(data-fancybox="ordercall" data-src="#feedback") Заказать обратный звонок
+			

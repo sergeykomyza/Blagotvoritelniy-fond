@@ -1,0 +1,16 @@
+section.news 
+    .container 
+        h5.title.news__title Новостная лента
+        .swiper.news__slider.js-sliderNews
+            .swiper-wrapper
+                each item, i in [1, 2, 3]
+                    .swiper-slide.slide 
+                        figure.slide__fotobox
+                            time.news__date 10 мая 2023
+                            img.slide__foto(src=`img/new-${i}.webp`, alt="#")
+                        .slide__content
+                            span.slide__name Благотворительный вечер для друзей 
+                            text.text.slide__text Фонд «Продлевая жизнь» собрал партнеров, врачей и дарителей в честь своего десятилетия 
+                            .slide__morebox
+                                button.slide__morebtn Узнать больше
+            .swiper-pagination

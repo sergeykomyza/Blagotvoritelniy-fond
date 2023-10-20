@@ -1,0 +1,111 @@
+.header{
+
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #FFF;
+
+    &__box{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 16px 0;
+    }
+
+    &__logobox{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    &__logo{
+        @media(max-width: 992px){
+            width: 36px;
+        }
+    }
+
+    &__logotext{
+        font-size: 10px;
+        @media(max-width: 992px){
+            font-size: 8px;
+        }
+    }
+
+    &__val{
+        display: block;
+        margin-bottom: 3px;
+        font-size: 10px;
+        @media(max-width: 992px){
+            font-size: 8px;
+        }
+    }
+
+    &-email{
+        text-align: center;
+        &__link{
+            font-size: 14px;
+            font-weight: 700;
+            
+        }
+    }
+
+    &-phone{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        text-align: right;
+        &__link{
+            font-size: 18px;
+            font-weight: 700;
+            @media(max-width: 992px){
+                font-size: 14px;
+            }
+        }
+        &__ordercall{
+            font-size: 12px;
+            text-decoration: underline;
+            color: var(--color-2);
+            &:hover{
+                text-decoration: none;
+            }
+            @media(max-width: 992px){
+                font-size: 8px;
+            }
+        }
+    }
+
+}
+
+.social{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    &__iconhover{
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: all .3s;
+    }
+    
+    &__iconlink{
+        position: relative;
+        display: flex;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        overflow: hidden;
+        &:hover .social__iconhover{
+            opacity: 1;
+        }
+    }
+
+}

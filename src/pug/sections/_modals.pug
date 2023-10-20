@@ -1,0 +1,16 @@
+#support-form.modal.modal-support 
+    include ./_supportForm.pug
+
+#full-case.modal.modal-case 
+    .modal-case__inner
+        img.modal-case__foto(src="", alt="@")
+        .modal-case__content 
+            .modal-case__name
+            .modal-case__text
+            button.button.modal-case__button Помочь проекту
+
+#feedback.modal.modal-feedback
+    form.form(action="#")
+        input.form__input(type="text" placeholder="Ваше имя") 
+        input.form__input.js-maskPhone(type="text" placeholder="Телефон") 
+        button.button.form__button Отправить

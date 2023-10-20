@@ -1,0 +1,15 @@
+-
+    const statistic = [
+        {num: '1 000 000', text: 'рублей собран в 20233 году'},
+        {num: '24 000',    text: 'человек получили помощь'},
+        {num: '6 000',     text: 'сохраненных жизней'}
+    ]
+
+.statistic 
+    .container 
+        .statistic__box 
+            each item, i in statistic 
+                div(class=`${i === 1 ? "statistic__item statistic__item--bg" : "statistic__item" }`)
+                    .statistic__num= item.num 
+                    p.statistic__text= item.text
+        .statistic__info Наши цели включают в себя поддержку пациентов с раком молочной железы, проведение ранней диагностики рака щитовидной железы и предоставление помощи пациентам, столкнувшимся с анапластическим раком щитовидной железы.
