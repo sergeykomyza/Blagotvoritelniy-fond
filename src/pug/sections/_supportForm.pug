@@ -5,8 +5,13 @@
     form.donat-form(action="#")
         .donat-form__labels
             each item, i in ['Ежемесячное пожертвование', 'Разовое пожертвование', '100 ₽','500 ₽','1 000 ₽','3 000 ₽','5 000 ₽','10 000 ₽','Другая сумма']
-                label.donat-form__label
-                    input.donat-form__input(type="radio" name="donat")
+                label(class=` ${i === 8 ? 'donat-form__label js-anotherSumWrap' : 'donat-form__label' } `)
+                    if(i === 0 || i === 1)
+                        input.donat-form__input(type="radio" name="donat0")
+                    else 
+                        input.donat-form__input(type="radio" name="donat")
+                    if(i === 8)
+                        input.donat-form__anothersum.js-anotherSum(type="text" name="anotherSum")
                     span.donat-form__val
                         = item
                         if(i === 0)
