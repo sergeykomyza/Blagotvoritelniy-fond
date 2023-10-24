@@ -8,8 +8,10 @@
                 label(class=` ${i === 8 ? 'donat-form__label js-anotherSumWrap' : 'donat-form__label' } `)
                     if(i === 0 || i === 1)
                         input.donat-form__input(type="radio" name="donat0")
-                    else 
+                    else if(i === 8)
                         input.donat-form__input(type="radio" name="donat")
+                    else
+                        input.donat-form__input(type="radio" name="donatAnother")
                     if(i === 8)
                         input.donat-form__anothersum.js-anotherSum(type="text" name="anotherSum")
                     span.donat-form__val
