@@ -1,25 +1,4 @@
-
-
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ПРОКРУТКА, ШАПКА
-// document.addEventListener('DOMContentLoaded', function () {
-//     // СКРОЛЛ К НУЖНОЙ СЕКЦИИ ПО КЛИКУ НА ПУНКТАХ МЕНЮ
-//     $('.menu__link').click(function () {
-//         var scroll_elem = $(this).attr('href');
-//         $('html, body').animate({
-//             scrollTop: $(scroll_elem).offset().top
-//         }, 1000);
-//     });
-//     // ДОБАВЛЯЕМ АКТИВНЫЙ КЛАСС ШАПКЕ
-//     function headerActiveToggle() {
-//         const scrollSize = window.pageYOffset
-//         scrollSize > 1 ? header.classList.add('active') : header.classList.remove('active')
-//     }
-//     window.addEventListener('load', headerActiveToggle) // ПРИ ПЕРЕЗАГРУЗКЕ СТРАНИЦЫ ЕСЛИ СТРАНИЦА УЖЕ ПРОСКРОЛЛЕНА
-//     window.addEventListener('scroll', headerActiveToggle) // ПРИ СКРОЛЛЕ
-// });
-
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ЛОГИКА ТАБОВ
 const tabs = () => {
     const runner = document.querySelector('.runner')
     const tabs = document.querySelectorAll('.js-tabBtn')
@@ -87,32 +66,32 @@ const tabs = () => {
 }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МАСКА ДЛЯ ИНПУТОВ (https://github.com/RobinHerbots/Inputmask)
-const inputMask = () => {
-    $(".js-maskPhone").inputmask({
-        mask: "+7 999 999 99 99",
-        clearIncomplete: true
-    });
-    $('.email').inputmask({
-        mask: "*{1,20}[.*{1,20}]@*{1,20}.*{2,4}",
-        clearIncomplete: true
-    //     greedy: false,
-    //     onBeforePaste: function (pastedValue, opts) {
-    //         pastedValue = pastedValue.toLowerCase();
-    //         return pastedValue.replace("mailto:", "");
-    //     },
-    //     definitions: {
-    //         '*': {
-    //             validator: "[0-9A-Za-z-а-я-]",
-    //             casing: "lower"
-    //         }
-    //     }
-    });
-    $(".js-maskDate").inputmask({
-        mask: "99/99/9999",
-        clearIncomplete: true,
-        'placeholder': 'dd/mm/yyyy'
-    });
-}
+// const inputMask = () => {
+//     $(".js-maskPhone").inputmask({
+//         mask: "+7 999 999 99 99",
+//         clearIncomplete: true
+//     });
+//     $('.email').inputmask({
+//         mask: "*{1,20}[.*{1,20}]@*{1,20}.*{2,4}",
+//         clearIncomplete: true
+//     //     greedy: false,
+//     //     onBeforePaste: function (pastedValue, opts) {
+//     //         pastedValue = pastedValue.toLowerCase();
+//     //         return pastedValue.replace("mailto:", "");
+//     //     },
+//     //     definitions: {
+//     //         '*': {
+//     //             validator: "[0-9A-Za-z-а-я-]",
+//     //             casing: "lower"
+//     //         }
+//     //     }
+//     });
+//     $(".js-maskDate").inputmask({
+//         mask: "99/99/9999",
+//         clearIncomplete: true,
+//         'placeholder': 'dd/mm/yyyy'
+//     });
+// }
 
 // ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ СЛАЙДЕР SWIPER (https://swiperjs.com/get-started) 
 const sliders = () => {
@@ -195,7 +174,7 @@ const sliders = () => {
     })
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ МОДАЛКА С ДЕТАЛЬНОЙ ИНФОЙ ПРО ЛЮДЕЙ, КОТОРЫМ ПОМОГЛИ
 const caseModal = () => {
     const modalFoto = document.querySelector('.modal-case__foto')
     const modalName = document.querySelector('.modal-case__name')
@@ -263,9 +242,9 @@ const map = () => {
 
 }
 
-// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+// ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ ИНИТ
 tabs()
-inputMask()
+// inputMask()
 sliders()
 caseModal()
 
