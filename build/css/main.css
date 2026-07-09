@@ -841,8 +841,6 @@ input:disabled, textarea:disabled {
 }
 
 .projects {
-  position: relative;
-  z-index: 2;
   margin-bottom: 142px;
 }
 @media (max-width: 992px) {
@@ -856,7 +854,6 @@ input:disabled, textarea:disabled {
 }
 
 .project {
-  
   display: grid;
   grid-template-columns: 450px 1fr;
   gap: 30px;
